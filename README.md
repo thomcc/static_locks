@@ -20,7 +20,6 @@ for in cases where you shouldn't.
 3. Doesn't contain things from parking_lot other than the locks, although we do
    reexport the parking lot crate, e.g. `static_locks::parking_lot::{...}`
    is available.
-4.
 
 # License
 

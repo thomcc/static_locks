@@ -7,7 +7,7 @@ description = "The `parking_lot` locks but usable in statics and const fn."
 license = "Apache-2.0/MIT"
 repository = "https://github.com/thomcc/static_locks"
 readme = "README.md"
-keywords = ["mutex", "rwlock", "reentrant", "thread", "static", "const"]
+keywords = ["mutex", "rwlock", "reentrant", "static", "const"]
 categories = ["concurrency"]
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
