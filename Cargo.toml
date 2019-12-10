@@ -1,0 +1,32 @@
+[package]
+name = "static_locks"
+version = "0.1.0"
+authors = ["Amanieu d'Antras <amanieu@gmail.com>", "Thom Chiovoloni <chiovolonit@gmail.com>"]
+edition = "2018"
+description = "The `parking_lot` locks but usable in statics and const fn."
+license = "Apache-2.0/MIT"
+repository = "https://github.com/thomcc/static_locks"
+readme = "README.md"
+keywords = ["mutex", "rwlock", "reentrant", "thread", "static", "const"]
+categories = ["concurrency"]
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+[features]
+default = []
+owning_ref_support = ["owning_ref", "parking_lot/owning_ref"]
+nightly = ["parking_lot/nightly"]
+deadlock_detection = ["parking_lot/deadlock_detection"]
+serde_support = ["parking_lot/serde", "serde"]
+
+[dependencies]
+parking_lot = "0.10"
+owning_ref = { version = "0.4", optional = true }
+serde = {version = "1.0.90", default-features = false, optional = true}
+scopeguard = { version = "1.0", default-features = false }
+
+[dev-dependencies]
+rand = "0.7"
+lazy_static = "1.4"
+
+# Used when testing out serde support.
+bincode = {version = "1.1.3"}
